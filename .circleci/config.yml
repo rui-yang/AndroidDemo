@@ -39,7 +39,7 @@ jobs:
           command: sleep 30        
       - run:
           name: Run Tests
-          command: ./gradlew connectedAndroidTest 
+          command: ./gradlew connectedAndroidTest -PdisablePreDex
       - store_artifacts:
           path: app/build/reports
           destination: reports
