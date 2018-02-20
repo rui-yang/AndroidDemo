@@ -33,7 +33,10 @@ jobs:
           background: true
       - run:
           name: Wait for emulator
-          command: circle-android wait-for-boot        
+          command: circle-android wait-for-boot 
+        - run:
+          name: Sleep
+          command: sleep 30        
       - run:
           name: Run Tests
           command: ./gradlew connectedAndroidTest 
