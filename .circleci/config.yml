@@ -36,7 +36,7 @@ jobs:
           command: circle-android wait-for-boot        
       - run:
           name: Run Tests
-          command: ./gradlew lint connectedAndroidTest --info
+          command: ./gradlew connectedAndroidTest --debug
       - store_artifacts:
           path: app/build/reports
           destination: reports
